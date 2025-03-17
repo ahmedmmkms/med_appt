@@ -13,6 +13,8 @@ import InstantConsultation from './Components/InstantConsultationBooking/Instant
 import BookingConsultation from './Components/BookingConsultation/BookingConsultation';
 import Notification from './Components/Notification/Notification';
 import ReviewForm from "./Components/ReviewForm/ReviewForm";
+import ProfileForm from "./Components/ProfileForm/ProfileForm";
+import ReportsLayout from "./Components/ReportsLayout/ReportsLayout";
 
 // Function component for the main App
 function App() {
@@ -30,12 +32,14 @@ function App() {
           <Notification>
           <Routes>
             {/* Define individual Route components for different pages */}
-            <Route path="/" element={<LandingPage/>}/>
-            <Route path="/signup" element={<SignUp/>}/>
-            <Route path="/login" element={<Login/>}/>
-             <Route path="/reviews" element={<ReviewForm/>}/>
-            <Route path="/instant-consultation" element={<InstantConsultation />} />
-            <Route path="/search/doctors" element={<BookingConsultation />} />
+           <Route path="/" element={<LandingPage/>}/>
+                <Route path="/signup" element={<SignUp/>}/>
+                <Route path="/login" element={<Login/>}/>
+                <Route path="/reviews" element={<ReviewForm/>}/>
+                <Route path="/reports" element={<ReportsLayout/>}/>
+                <Route path="/profile" element={<ProfileForm/>}/>
+                <Route path="/instant-consultation" element={<InstantConsultation />} />
+                <Route path="/search/doctors" element={<BookingConsultation />} />
           </Routes>
           </Notification>
         </BrowserRouter>
